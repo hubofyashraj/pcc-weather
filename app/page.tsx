@@ -18,7 +18,7 @@ export default function Home() {
       setShow(false)
       return
     }
-    var geocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${city},In&limit=5&appid=${apikey}`
+    var geocoding = `https://api.openweathermap.org/geo/1.0/direct?q=${city},In&limit=5&appid=${apikey}`
     const geoData = await fetch(geocoding).then((res)=>{
       res.json().then(async (gd)=>{
         var cityData = gd[0]
